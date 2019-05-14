@@ -1,3 +1,2 @@
-/Ball.class
-/Driver.class
-/Polkadot.class
+**/*.class
+out
