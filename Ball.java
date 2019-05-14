@@ -1,6 +1,8 @@
 // Computer Math - Unit 2 - Lab 11 - Bouncing Pinball
 import java.awt.*;
 
+import javax.swing.Timer;
+
 public class Ball extends Polkadot
 {
 
@@ -101,4 +103,6 @@ public class Ball extends Polkadot
 		myBuffer.setColor(getColor());
 		myBuffer.fillOval((int) (getX() - getRadius()), (int) (getY() - getRadius()), (int) getDiameter(), (int) getDiameter());
 	}
+
+
 }
