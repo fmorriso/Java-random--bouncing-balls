@@ -12,6 +12,8 @@ public class GameController {
     public GameController(JFrame frame) {
 	this.parentComponent = frame;
 	this.panelSize = parentComponent.getSize();
+	
+	balls = generateBalls();
     }
 
     private ArrayList<RandomBall> generateBalls() {

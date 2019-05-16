@@ -28,6 +28,7 @@ public class Driver {
 	frame.setSize(frameSize);
 	
 	GameController controller = new GameController(frame);
+	
 
 	MainPanel pnl = new MainPanel(controller);
 	frame.getContentPane().add(pnl, BorderLayout.CENTER);
