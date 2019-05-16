@@ -26,8 +26,10 @@ public class Driver {
 	// frame.pack() below:
 	frame.setPreferredSize(frameSize);
 	frame.setSize(frameSize);
+	
+	GameController controller = new GameController(frame);
 
-	MainPanel pnl = new MainPanel(frameSize);
+	MainPanel pnl = new MainPanel(controller);
 	frame.getContentPane().add(pnl, BorderLayout.CENTER);
 
 	frame.pack();
