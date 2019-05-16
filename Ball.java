@@ -13,9 +13,10 @@ public class Ball extends Polkadot {
     private double dy;
 
     // constructors
-    public Ball() // default constructor
+    @SuppressWarnings("unused")
+    private Ball() // default constructor
     {
-	this(200, 200, DEFAULT_DIAMETER, Color.BLACK);
+	//this(200, 200, DEFAULT_DIAMETER, Color.BLACK);
     }
 
     public Ball(double x, double y, double dia, Color c) {
@@ -88,7 +89,11 @@ public class Ball extends Polkadot {
     }
 
     public void draw(Graphics myBuffer) {
-	myBuffer.setColor(getColor());
+	Color c = getColor();
+	if(c == Color.BLACK) {
+	    System.out.println("Warning: ball color is black, which is same as background color of game");
+	}
+	myBuffer.setColor(c);
 	myBuffer.fillOval((int) (getX() - getRadius()), (int) (getY() - getRadius()), (int) getDiameter(),
 		(int) getDiameter());
     }
