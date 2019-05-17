@@ -1,11 +1,10 @@
 import javax.swing.*;
+import javax.swing.border.Border;
+
 //
 import java.awt.*;
 import java.awt.Dimension;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
 
 @SuppressWarnings("serial")
 public class MainPanel extends JPanel {
@@ -15,23 +14,21 @@ public class MainPanel extends JPanel {
     private Graphics myBuffer;
 
     private Timer game;
-    private boolean gameIsActive;
-
     private GameController controller;
 
     public MainPanel(GameController controller) {
 	this.controller = controller;
 	this.gameSize = controller.getPanelSize();
+	Border zeroBorder = BorderFactory.createEmptyBorder(0, 0, 0, 0);
+	this.setBorder(zeroBorder);
 	System.out.format("Constructor: game size: w = %d, h = %d%n", gameSize.width, gameSize.height);
-	//this.setSize(gameSize);
-	//this.setPreferredSize(gameSize);
+	this.setSize(gameSize);
+	this.setPreferredSize(gameSize);
 	System.out.format("MainPanel size: w = %d, h = %d%n", getWidth(), getHeight());
 	
 	myImage = new BufferedImage(gameSize.width, gameSize.height, BufferedImage.TYPE_INT_RGB);
 	myBuffer = myImage.getGraphics();
 
-	// create a timer that will control the game and start it
-	this.gameIsActive = true;
 	final int delay = 5;
 	this.game = new Timer(delay, new GameTimer(this));
 	this.game.start();

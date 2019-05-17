@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Insets;
 import java.util.ArrayList;
 //
 import javax.swing.JFrame;
@@ -9,11 +10,13 @@ public class GameController {
 
     private JFrame parentComponent;
     private Dimension gameSize;
+    private Insets insets;
     private ArrayList<RandomBall> balls;
 
     public GameController(JFrame frame) {
 	this.parentComponent = frame;
 	this.gameSize = parentComponent.getSize();
+	this.insets = parentComponent.getInsets();
 
 	balls = generateBalls();
 	startBallTimers();
@@ -31,7 +34,7 @@ public class GameController {
 	System.out.format("Number of balls to create is %d%n", n);
 	for (int i = 0; i < n; i++) {
 	    Color c = getUniqueColor(list);
-	    RandomBall b = new RandomBall(getRandomX(), getRandomY(), getRandomDiameter(), c, gameSize);
+	    RandomBall b = new RandomBall(getRandomX(), getRandomY(), getRandomDiameter(), c, gameSize, insets);
 	    int delay = getRandomDelay();
 	    Timer t = new Timer(delay, (ae -> {
 		b.move(this.gameSize.width, this.gameSize.height);
@@ -45,29 +48,34 @@ public class GameController {
 
     private Color getUniqueColor(ArrayList<RandomBall> list) {
 
+	// avoid unnecessary overhead when the list is small/empty
 	if (list.size() <= 1) {
 	    return ColorExtensions.getRandomDarkColor();
 	}
+	
 	boolean keepLooking = true;
+	// vary the minimum separation between colors of each ball colors based on the size of the list.
+	// The more items in the list, the less unique the colors need to be.
 	int byTotalRGB = (int) (64.0 / list.size());
-	//System.out.format("uniqueColor: list size = %d, diff = %d%n", list.size(), byTotalRGB);
+	//System.out.format("uniqueColor: list size = %d, minimum difference = %d%n", list.size(), byTotalRGB);
 	Color c = null;
 	int count = 0;
 	int attempts = 0;
-	int maxAttempts = (int) (1024.0 * 2 / list.size());
+	// vary the maximum number of attempts to insure unique colors based on the size of the list.
+	// The more items in the list, the less unique the colors need to be.
+	int maxAttempts = (int) (2048.0 / list.size());
 	do {
 	    attempts++;
 	    c = ColorExtensions.getRandomDarkColor();
-	    int i = 0;
-	    for (RandomBall b : list) {
-		i++;
+	    // check the other balls to see if this new ball's color is unique enough
+	    for (RandomBall b : list) {		
 		// System.out.format("Color difference %d = %d%n", i,
 		// ColorExtensions.getColorDifference(c, b.getColor()));
 		if (ColorExtensions.areSignificantlyDifferentColors(c, b.getColor(), byTotalRGB)) {
 		    count++;
 		}
 	    }
-	    // stop if we have unique colors or exceeded max number of attempts
+	    // stop if we have unique colors or have exceeded the maximum number of attempts to find a unique color
 	    if (count == list.size()) {
 		keepLooking = false;
 	    } else if (attempts == maxAttempts) {

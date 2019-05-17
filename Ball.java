@@ -3,8 +3,6 @@ import java.awt.*;
 
 public class Ball extends Polkadot {
 
-    private static final double DEFAULT_DIAMETER = 50;
-
     private static int MAX_MOVE = 12;
     private static int MIN_MOVE = MAX_MOVE / 2;
     private static int MOVE_RANGE = MAX_MOVE - MIN_MOVE + 1;
@@ -14,9 +12,8 @@ public class Ball extends Polkadot {
 
     // constructors
     @SuppressWarnings("unused")
-    private Ball() // default constructor
-    {
-	//this(200, 200, DEFAULT_DIAMETER, Color.BLACK);
+    private Ball() {
+	// prevent unintialized instances
     }
 
     public Ball(double x, double y, double dia, Color c) {
@@ -28,17 +25,17 @@ public class Ball extends Polkadot {
 	MAX_MOVE = (int) (getDiameter() * 15.0 / 100);
 	MIN_MOVE = (int) (getDiameter() * 05.0 / 100);
 	MOVE_RANGE = MAX_MOVE - MIN_MOVE + 1;
-	System.out.format("diameter = %.1f, min move = %d, max move = %d %n", getDiameter(), MIN_MOVE, MAX_MOVE);
+	//System.out.format("diameter = %.1f, min move = %d, max move = %d %n", getDiameter(), MIN_MOVE, MAX_MOVE);
 
 	// make sure x movement is faster/farther than y movement
 	dy = getRandomDelta();
-	dx = dy * 1.3333;
+	dx = getRandomDelta();
 
     }
 
     private double getRandomDelta() {
 	double retval = Math.random() * MOVE_RANGE + MIN_MOVE;
-	System.out.format("random delta=%.1f%n", retval);
+	//System.out.format("random delta=%.1f%n", retval);
 	return retval;
     }
 
@@ -59,8 +56,6 @@ public class Ball extends Polkadot {
     public double getdy() {
 	return dy;
     }
-    
-
 
     // instance methods
     public void move(double rightEdge, double bottomEdge) {
@@ -92,12 +87,16 @@ public class Ball extends Polkadot {
 
     public void draw(Graphics myBuffer) {
 	Color c = getColor();
-	if(c == Color.BLACK) {
+	if (c == Color.BLACK) {
 	    System.out.println("Warning: ball color is black, which is same as background color of game");
 	}
 	myBuffer.setColor(c);
 	myBuffer.fillOval((int) (getX() - getRadius()), (int) (getY() - getRadius()), (int) getDiameter(),
 		(int) getDiameter());
+	/*
+	myBuffer.fillOval((int) (getX()), (int) (getY()), (int) getDiameter(),
+		(int) getDiameter());
+	 */
     }
 
 }
