@@ -29,6 +29,7 @@ public class RandomBall extends RunnableBall {
 
     public void setTimer(Timer t) {
 	this.t = t;
+	System.out.format("RandomBall: timer delay = %d%n", t.getDelay());
     }
 
     public Timer getTimer() {

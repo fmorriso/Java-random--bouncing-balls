@@ -22,8 +22,10 @@ public class MainPanel extends JPanel {
     public MainPanel(GameController controller) {
 	this.controller = controller;
 	this.gameSize = controller.getPanelSize();
-	this.setSize(gameSize);
-	this.setPreferredSize(gameSize);
+	System.out.format("Constructor: game size: w = %d, h = %d%n", gameSize.width, gameSize.height);
+	//this.setSize(gameSize);
+	//this.setPreferredSize(gameSize);
+	System.out.format("MainPanel size: w = %d, h = %d%n", getWidth(), getHeight());
 	
 	myImage = new BufferedImage(gameSize.width, gameSize.height, BufferedImage.TYPE_INT_RGB);
 	myBuffer = myImage.getGraphics();
@@ -35,6 +37,17 @@ public class MainPanel extends JPanel {
 	this.game.start();
 
     }
+    
+   // @Override
+    @Override
+    public void addNotify() {
+	super.addNotify();
+	System.out.println("MainPanel has been added");
+	System.out.format("addNotify: game size: w = %d, h = %d%n", getWidth(), getHeight());
+	this.setSize(gameSize);
+	this.setPreferredSize(gameSize);
+    }
+    
 
     public void paintComponent(Graphics g) {
 	

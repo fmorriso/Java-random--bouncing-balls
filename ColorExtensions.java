@@ -77,4 +77,10 @@ public class ColorExtensions {
 
 	return result;
     }
+    
+    public static int getColorDifference(Color c1, Color c2) {
+	int totalRGB1 = c1.getRed() + c1.getGreen() + c1.getBlue();
+	int totalRGB2 = c2.getRed() + c2.getGreen() + c2.getBlue();
+	return Math.abs(totalRGB1 - totalRGB2);
+    }
 }

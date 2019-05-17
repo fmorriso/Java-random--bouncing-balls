@@ -59,6 +59,8 @@ public class Ball extends Polkadot {
     public double getdy() {
 	return dy;
     }
+    
+
 
     // instance methods
     public void move(double rightEdge, double bottomEdge) {
