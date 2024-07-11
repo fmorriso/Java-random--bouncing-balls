@@ -34,7 +34,7 @@ public class RandomBall extends Ball implements Runnable
         }
         totalMoves++;
 
-        // if we hit an edge, change the color randomly
+        // if ball hit an edge, change the color randomly
         boolean hitAnEdge = super.move(adjustedRightEdge, adjustedBottomEdge);
         if (hitAnEdge) setColor(ColorExtensions.getRandomDarkColor());
         return hitAnEdge;

@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="093bb316-59fc-4c38-8532-ed0a095eb1f1" name="Default Changelist" comment="refactor screen scaling logic into separate class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ColorExtensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColorExtensions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/MainPanel.java" afterDir="false" />
+    <list default="true" id="093bb316-59fc-4c38-8532-ed0a095eb1f1" name="Default Changelist" comment="change color of each ball after hitting and edge">
       <change beforePath="$PROJECT_DIR$/RandomBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/RandomBall.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +132,7 @@
       <workItem from="1720724027537" duration="57000" />
       <workItem from="1720724438401" duration="5000" />
       <workItem from="1720730950149" duration="487000" />
-      <workItem from="1720731441264" duration="1664000" />
+      <workItem from="1720731441264" duration="1972000" />
     </task>
     <task id="LOCAL-00001" summary="refactor screen scaling logic into separate class">
       <option name="closed" value="true" />
@@ -147,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720732387471</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="change color of each ball after hitting and edge">
+      <option name="closed" value="true" />
+      <created>1720733356835</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720733356835</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -188,7 +191,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="refactor screen scaling logic into separate class" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor screen scaling logic into separate class" />
+    <MESSAGE value="change color of each ball after hitting and edge" />
+    <option name="LAST_COMMIT_MESSAGE" value="change color of each ball after hitting and edge" />
   </component>
   <component name="masterDetails">
     <states>
