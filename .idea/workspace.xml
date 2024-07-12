@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="093bb316-59fc-4c38-8532-ed0a095eb1f1" name="Default Changelist" comment="include java version information in main window's title. Simplify color extensions.">
+    <list default="true" id="093bb316-59fc-4c38-8532-ed0a095eb1f1" name="Default Changelist" comment="change unncessary doubles to ints">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ColorExtensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColorExtensions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +134,7 @@
       <workItem from="1720724438401" duration="5000" />
       <workItem from="1720730950149" duration="487000" />
       <workItem from="1720731441264" duration="2148000" />
-      <workItem from="1720753586603" duration="729000" />
+      <workItem from="1720753586603" duration="1068000" />
     </task>
     <task id="LOCAL-00001" summary="refactor screen scaling logic into separate class">
       <option name="closed" value="true" />
@@ -168,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720753912072</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="change unncessary doubles to ints">
+      <option name="closed" value="true" />
+      <created>1720754384976</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720754384976</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -212,7 +220,8 @@
     <MESSAGE value="refactor screen scaling logic into separate class" />
     <MESSAGE value="change color of each ball after hitting and edge" />
     <MESSAGE value="include java version information in main window's title. Simplify color extensions." />
-    <option name="LAST_COMMIT_MESSAGE" value="include java version information in main window's title. Simplify color extensions." />
+    <MESSAGE value="change unncessary doubles to ints" />
+    <option name="LAST_COMMIT_MESSAGE" value="change unncessary doubles to ints" />
   </component>
   <component name="masterDetails">
     <states>

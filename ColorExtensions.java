@@ -69,13 +69,26 @@ public class ColorExtensions
         return c;
     }
 
-    // if two Color instances are significantly different from each other
-    // in terms of their total RGB values, return true; otherwise, return false.
+    /**
+     * If two Color instances are significantly different from each other,
+     * in terms of their total RGB values, return true; otherwise, return false.
+     * @param c1 - a Color instance
+     * @param c2 - a Color instance
+     * @param byTotalRGB - the expected minimum total RGB difference between the two colors
+     * @return - true if the total RGB difference is less than or equal to the expected value;
+     *           otherwise, return false.
+     */
     public static boolean areSignificantlyDifferentColors(Color c1, Color c2, int byTotalRGB)
     {
-        return getColorDifference(c1, c2) < byTotalRGB;
+        return getColorDifference(c1, c2) <= byTotalRGB;
     }
 
+    /**
+     *
+     * @param c1 - a Color instance
+     * @param c2 - a Color instance
+     * @return the absolute value integer total difference (R + G + B) between the two colors
+     */
     public static int getColorDifference(Color c1, Color c2)
     {
         int totalRGB1 = c1.getRed() + c1.getGreen() + c1.getBlue();
