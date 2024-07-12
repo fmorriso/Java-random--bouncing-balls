@@ -7,10 +7,11 @@ public class Driver
     public static void main(String[] args)
     {
         // use a percentage of the available device screen size, making sure it is an even value and square
-        Dimension gameSize = SwingScreenUtilities.getScaledSize(0.5, 100, true);
+        Dimension gameSize = SwingScreenUtilities.getScaledSize(0.5, 10, true);
         System.out.format("gameSize=%s%n", gameSize);
 
-        JFrame frame = new MainFrame("Random Moving Balls");
+        String title = String.format("Random Moving Balls using Java version %s", getJavaVersion());
+        JFrame frame = new MainFrame(title);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // note the use of setPreferredSize instead of setSize, coupled with
@@ -44,6 +45,15 @@ public class Driver
 
         //System.out.format("Driver: frame: w = %d, h = %d%n", frame.getWidth(), frame.getHeight());
 
+    }
+
+    /** get the java version that is running the current program
+     * @return string containing the java version running the current program
+     */
+    private static String getJavaVersion()
+    {
+        Runtime.Version runTimeVersion = Runtime.version();
+        return String.format("%s.%s.%s.%s", runTimeVersion.feature(), runTimeVersion.interim(), runTimeVersion.update(), runTimeVersion.patch());
     }
 
 }

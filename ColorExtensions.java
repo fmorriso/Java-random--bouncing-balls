@@ -73,14 +73,7 @@ public class ColorExtensions
     // in terms of their total RGB values, return true; otherwise, return false.
     public static boolean areSignificantlyDifferentColors(Color c1, Color c2, int byTotalRGB)
     {
-        boolean result = true;
-        // get the total RGB of the two colors
-        int totalRGB1 = c1.getRed() + c1.getGreen() + c1.getBlue();
-        int totalRGB2 = c2.getRed() + c2.getGreen() + c2.getBlue();
-        if (Math.abs(totalRGB1 - totalRGB2) < byTotalRGB)
-            result = false;
-
-        return result;
+        return getColorDifference(c1, c2) < byTotalRGB;
     }
 
     public static int getColorDifference(Color c1, Color c2)
