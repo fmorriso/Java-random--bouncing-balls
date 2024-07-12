@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="093bb316-59fc-4c38-8532-ed0a095eb1f1" name="Default Changelist" comment="change unncessary doubles to ints">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ColorExtensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColorExtensions.java" afterDir="false" />
-    </list>
+    <list default="true" id="093bb316-59fc-4c38-8532-ed0a095eb1f1" name="Default Changelist" comment="add some JavaDoc" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,7 +131,7 @@
       <workItem from="1720724438401" duration="5000" />
       <workItem from="1720730950149" duration="487000" />
       <workItem from="1720731441264" duration="2148000" />
-      <workItem from="1720753586603" duration="1068000" />
+      <workItem from="1720753586603" duration="1217000" />
     </task>
     <task id="LOCAL-00001" summary="refactor screen scaling logic into separate class">
       <option name="closed" value="true" />
@@ -176,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720754384976</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add some JavaDoc">
+      <option name="closed" value="true" />
+      <created>1720754767840</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720754767840</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -221,7 +226,8 @@
     <MESSAGE value="change color of each ball after hitting and edge" />
     <MESSAGE value="include java version information in main window's title. Simplify color extensions." />
     <MESSAGE value="change unncessary doubles to ints" />
-    <option name="LAST_COMMIT_MESSAGE" value="change unncessary doubles to ints" />
+    <MESSAGE value="add some JavaDoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some JavaDoc" />
   </component>
   <component name="masterDetails">
     <states>

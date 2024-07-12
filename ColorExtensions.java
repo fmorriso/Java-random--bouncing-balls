@@ -23,19 +23,16 @@ public class ColorExtensions
     public static Color getRandomBrightColor()
     {
         final int HIGHEST = 255;
+        final int LOWEST = 128;
         final int RANGE = HIGHEST - LOWEST + 1;
 
-        final int BRIGHT_COLOR_THRESHOLD = 128;
+
 
         StringBuilder hexColor = new StringBuilder();
         hexColor.append("#");
         // generate the three parts of the color
         for (int j = 0; j < 3; j++) {
-            int k;
-            // make sure we get something closer to white than black
-            do {
-                k = (int) (Math.random() * RANGE) + LOWEST;
-            } while (k < BRIGHT_COLOR_THRESHOLD);
+            int k  = (int) (Math.random() * RANGE) + LOWEST;;
             hexColor.append(String.format("%02X", k));
         }
         return Color.decode(hexColor.toString());
