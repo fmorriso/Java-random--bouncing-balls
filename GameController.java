@@ -36,6 +36,7 @@ public class GameController
             Color c = getUniqueColor(list);
             RandomBall b = new RandomBall(getRandomX(), getRandomY(), getRandomDiameter(), c, gameSize, insets);
             int delay = getRandomDelay();
+            // each ball gets its own timer to help move it around the screen
             Timer t = new Timer(delay, (
                     ae -> {
                         b.move(this.gameSize.width, this.gameSize.height);
@@ -96,7 +97,7 @@ public class GameController
         final int MAX = 9;
         final int MIN = 3;
         final int RANGE = MAX - MIN + 1;
-        return (int) (Math.random() * RANGE + MIN);
+        return (int) (Math.random() * RANGE) + MIN;
     }
 
     private int getRandomDelay()

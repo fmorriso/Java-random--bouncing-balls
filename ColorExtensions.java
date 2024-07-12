@@ -3,17 +3,17 @@ import java.awt.*;
 public class ColorExtensions
 {
 
-    private static final double LOWEST = 0;
+    private static final int LOWEST = 0;
 
     // returns a random Color
     public static Color getRandomColor()
     {
-        final double HIGHEST = 255;
-        final double RANGE = HIGHEST - LOWEST + 1;
+        final int HIGHEST = 255;
+        final int RANGE = HIGHEST - LOWEST + 1;
 
-        int r = (int) (Math.random() * RANGE + LOWEST);
-        int g = (int) (Math.random() * RANGE + LOWEST);
-        int b = (int) (Math.random() * RANGE + LOWEST);
+        int r = (int) (Math.random() * RANGE) + LOWEST;
+        int g = (int) (Math.random() * RANGE) + LOWEST;
+        int b = (int) (Math.random() * RANGE) + LOWEST;
 
         return new Color(r, g, b);
     }
@@ -22,8 +22,8 @@ public class ColorExtensions
     // portion of the light spectrum
     public static Color getRandomBrightColor()
     {
-        final double HIGHEST = 255;
-        final double RANGE = HIGHEST - LOWEST + 1;
+        final int HIGHEST = 255;
+        final int RANGE = HIGHEST - LOWEST + 1;
 
         final int BRIGHT_COLOR_THRESHOLD = 128;
 
@@ -34,7 +34,7 @@ public class ColorExtensions
             int k;
             // make sure we get something closer to white than black
             do {
-                k = (int) (Math.random() * RANGE + LOWEST);
+                k = (int) (Math.random() * RANGE) + LOWEST;
             } while (k < BRIGHT_COLOR_THRESHOLD);
             hexColor.append(String.format("%02X", k));
         }
@@ -45,12 +45,12 @@ public class ColorExtensions
     // spectrum
     public static Color getRandomDarkColor()
     {
-        final double HIGHEST = 127;
-        final double RANGE = HIGHEST - LOWEST + 1;
+        final int HIGHEST = 127;
+        final int RANGE = HIGHEST - LOWEST + 1;
 
-        int r = (int) (Math.random() * RANGE + LOWEST);
-        int g = (int) (Math.random() * RANGE + LOWEST);
-        int b = (int) (Math.random() * RANGE + LOWEST);
+        int r = (int) (Math.random() * RANGE) + LOWEST;
+        int g = (int) (Math.random() * RANGE) + LOWEST;
+        int b = (int) (Math.random() * RANGE) + LOWEST;
 
         return new Color(r, g, b);
     }
