@@ -5,7 +5,11 @@ public class ColorExtensions
 
     private static final int LOWEST = 0;
 
-    // returns a random Color
+    /**
+     * Return a random color instance.
+     *
+     * @return Color instance that contains random values for Red, Green and Blue
+     */
     public static Color getRandomColor()
     {
         final int HIGHEST = 255;
@@ -18,28 +22,33 @@ public class ColorExtensions
         return new Color(r, g, b);
     }
 
-    // returns a random color that is biased towards the brigher
-    // portion of the light spectrum
+    /**
+     * Return a color that is biased towards the brighter/lighter portion of the light spectrum
+     *
+     * @return Color instance that is in the brighter/lighter portion of the color spectrum
+     */
     public static Color getRandomBrightColor()
     {
         final int HIGHEST = 255;
         final int LOWEST = 128;
         final int RANGE = HIGHEST - LOWEST + 1;
 
-
-
         StringBuilder hexColor = new StringBuilder();
         hexColor.append("#");
         // generate the three parts of the color
         for (int j = 0; j < 3; j++) {
-            int k  = (int) (Math.random() * RANGE) + LOWEST;;
+            int k = (int) (Math.random() * RANGE) + LOWEST;
+            ;
             hexColor.append(String.format("%02X", k));
         }
         return Color.decode(hexColor.toString());
     }
 
-    // return a color that is biased towards the darker portion of the light
-    // spectrum
+    /**
+     * Return a color that is biased towards the darker portion of the light spectrum
+     *
+     * @return Color instance that is in the darker portion of the color spectrum
+     */
     public static Color getRandomDarkColor()
     {
         final int HIGHEST = 127;
@@ -52,10 +61,14 @@ public class ColorExtensions
         return new Color(r, g, b);
     }
 
-    // return a color that is biased towards the darker portion of the light
-    // spectrum
-    // and is sufficiently different from the comparison color by the specified
-    // amount.
+    /**
+     * Return a color that is biased towards the darker portion of the light spectrum
+     * while simultaneously being sufficiently different in total R+G+B than the comparison
+     * Color instance by the specified total R+G+B amount.
+     *
+     * @return Color instance that is in the darker portion of the color spectrum
+     * @apiNote We look for a dark color that is sufficiently different from the comparision Color instance.
+     */
     public static Color getRandomDarkColor(Color compareColor, int byTotalRGB)
     {
         Color c;
@@ -69,11 +82,12 @@ public class ColorExtensions
     /**
      * If two Color instances are significantly different from each other,
      * in terms of their total RGB values, return true; otherwise, return false.
-     * @param c1 - a Color instance
-     * @param c2 - a Color instance
+     *
+     * @param c1         - a Color instance
+     * @param c2         - a Color instance
      * @param byTotalRGB - the expected minimum total RGB difference between the two colors
      * @return - true if the total RGB difference is less than or equal to the expected value;
-     *           otherwise, return false.
+     * otherwise, return false.
      */
     public static boolean areSignificantlyDifferentColors(Color c1, Color c2, int byTotalRGB)
     {
@@ -81,7 +95,6 @@ public class ColorExtensions
     }
 
     /**
-     *
      * @param c1 - a Color instance
      * @param c2 - a Color instance
      * @return the absolute value integer total difference (R + G + B) between the two colors
