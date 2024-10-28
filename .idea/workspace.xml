@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="093bb316-59fc-4c38-8532-ed0a095eb1f1" name="Default Changelist" comment="make getRandomBrightColor more efficient">
+    <list default="true" id="093bb316-59fc-4c38-8532-ed0a095eb1f1" name="Default Changelist" comment="add java doc">
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ColorExtensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColorExtensions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Driver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,8 +113,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
       </set>
     </attachedChunks>
   </component>
@@ -136,7 +137,11 @@
       <workItem from="1720731441264" duration="2148000" />
       <workItem from="1720753586603" duration="1217000" />
       <workItem from="1720754971006" duration="300000" />
-      <workItem from="1720790509601" duration="2759000" />
+      <workItem from="1720790509601" duration="3252000" />
+      <workItem from="1722359346080" duration="1430000" />
+      <workItem from="1722617441898" duration="54000" />
+      <workItem from="1722619139238" duration="93000" />
+      <workItem from="1723605607040" duration="110000" />
     </task>
     <task id="LOCAL-00001" summary="refactor screen scaling logic into separate class">
       <option name="closed" value="true" />
@@ -194,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720755200832</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add java doc">
+      <option name="closed" value="true" />
+      <created>1720793661273</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1720793661273</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -241,7 +254,8 @@
     <MESSAGE value="change unncessary doubles to ints" />
     <MESSAGE value="add some JavaDoc" />
     <MESSAGE value="make getRandomBrightColor more efficient" />
-    <option name="LAST_COMMIT_MESSAGE" value="make getRandomBrightColor more efficient" />
+    <MESSAGE value="add java doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="add java doc" />
   </component>
   <component name="masterDetails">
     <states>
